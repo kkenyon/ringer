@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codingkat.ring.scheduler"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+    
+    <supports-screens
+                  android:smallScreens="true"
+                  android:normalScreens="true"
+                  android:largeScreens="true"
+                  android:xlargeScreens="true"
+                  android:anyDensity="true"
+     />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+        <service android:name="ccom.codingkat.ring.schedulerAlarmIntentService"/>
+        <service android:name="com.codingkat.ring.scheduler.AlarmDeleteIntentService"/>
+        <activity
+            android:name="com.codingkat.ring.scheduler.AlarmActivity"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".Screen2Activity" 
+            android:noHistory="true">
+        </activity>
+
+        <activity
+    			android:name="com.codingkat.ring.scheduler.PrefsActivity"
+    			android:theme="@android:style/Theme.Black.NoTitleBar" >
+  		</activity>
+  		
+        
+        <receiver android:name="com.codingkat.ring.scheduler.MyBroadcastReceiver"></receiver>
+        <receiver android:name="com.codingkat.ring.scheduler.MyBroadcastReceiverRing"></receiver>
+        <receiver android:name="com.codingkat.ring.scheduler.BootReceiver">
+			<intent-filter>	
+        	<action android:name="android.intent.action.BOOT_COMPLETED" />
+        	
+    		</intent-filter>
+    		<intent-filter>
+        	<action android:name="com.codingkat.ring.scheduler.AlarmLoadingDone" />
+        	
+    		</intent-filter>
+
+        </receiver>	
+  		
+    </application>
+</manifest>

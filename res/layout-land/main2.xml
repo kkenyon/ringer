@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>   
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/mainLayout2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="@drawable/ringerbgsideways">
+        	  
+  <RelativeLayout 
+    android:id="@+id/mainLayoutBut"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:layout_below="@+id/adView">
+
+      
+     <Button android:text="Delete" android:id="@+id/DeleteSched"
+			android:onClick="delSchedule" android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+
+			></Button>
+    		
+    	<Button android:text="Add" android:id="@+id/AddSched"
+    	    android:onClick="addSchedule"
+			 android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/DeleteSched"></Button>
+    	</RelativeLayout>
+
+    	
+    	<ScrollView 
+    android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/mainLayoutBut"
+        >
+
+<RelativeLayout 
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<TextView android:id="@+id/RingerSchedules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FFFFFF"/>	    
+
+</RelativeLayout>
+</ScrollView>
+    	
+    
+
+
+
+    	
+
+
+
+</RelativeLayout>

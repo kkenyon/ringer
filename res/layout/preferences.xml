@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+ <PreferenceCategory
+   android:summary="Ringer Options"
+   android:title="Ringer Options" >
+
+<com.codingkat.ring.scheduler.DefaultVolDialog
+                  android:summary="The volume your ringtone returns to after your phone has returned from silent or vibrate."
+                  android:title="Return Volume" />
+ </PreferenceCategory>
+
+</PreferenceScreen>
+

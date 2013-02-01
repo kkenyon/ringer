@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ringer</string>
+    <string name="repeatSpinnerTitle">Frequency</string>
+    
+
+</resources>
